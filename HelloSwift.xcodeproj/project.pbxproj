@@ -12,6 +12,9 @@
 		4F91F2631E6165F4006D1105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F91F2621E6165F4006D1105 /* Assets.xcassets */; };
 		4F91F2661E6165F4006D1105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F91F2641E6165F4006D1105 /* LaunchScreen.storyboard */; };
 		4F91F26E1E617002006D1105 /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F91F26D1E617002006D1105 /* HelloSwiftViewController.swift */; };
+		4F91F2701E618D8B006D1105 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F91F26F1E618D8B006D1105 /* ConverterViewController.swift */; };
+		4F91F2721E618DC0006D1105 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F91F2711E618DC0006D1105 /* Converter.swift */; };
+		4F91F2741E618DF9006D1105 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F91F2731E618DF9006D1105 /* ConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		4F91F2651E6165F4006D1105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F91F2671E6165F4006D1105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F91F26D1E617002006D1105 /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloSwiftViewController.swift; sourceTree = "<group>"; };
+		4F91F26F1E618D8B006D1105 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		4F91F2711E618DC0006D1105 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		4F91F2731E618DF9006D1105 /* ConverterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,8 @@
 		4F91F25A1E6165F4006D1105 /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
-				4F91F26D1E617002006D1105 /* HelloSwiftViewController.swift */,
+				4F91F2761E618E45006D1105 /* HelloSwift */,
+				4F91F2751E618E26006D1105 /* Converter */,
 				4F91F25B1E6165F4006D1105 /* AppDelegate.swift */,
 				4F91F25F1E6165F4006D1105 /* Main.storyboard */,
 				4F91F2621E6165F4006D1105 /* Assets.xcassets */,
@@ -62,6 +69,24 @@
 				4F91F2671E6165F4006D1105 /* Info.plist */,
 			);
 			path = HelloSwift;
+			sourceTree = "<group>";
+		};
+		4F91F2751E618E26006D1105 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				4F91F26F1E618D8B006D1105 /* ConverterViewController.swift */,
+				4F91F2711E618DC0006D1105 /* Converter.swift */,
+				4F91F2731E618DF9006D1105 /* ConverterView.swift */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
+		4F91F2761E618E45006D1105 /* HelloSwift */ = {
+			isa = PBXGroup;
+			children = (
+				4F91F26D1E617002006D1105 /* HelloSwiftViewController.swift */,
+			);
+			name = HelloSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +163,9 @@
 			files = (
 				4F91F25C1E6165F4006D1105 /* AppDelegate.swift in Sources */,
 				4F91F26E1E617002006D1105 /* HelloSwiftViewController.swift in Sources */,
+				4F91F2721E618DC0006D1105 /* Converter.swift in Sources */,
+				4F91F2741E618DF9006D1105 /* ConverterView.swift in Sources */,
+				4F91F2701E618D8B006D1105 /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
