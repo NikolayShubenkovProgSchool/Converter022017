@@ -77,7 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qS-Zg-aA8" userLabel="ConverterView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qS-Zg-aA8" userLabel="ConverterView" customClass="ConverterView" customModule="HelloSwift" customModuleProvider="target">
                                 <rect key="frame" x="36" y="60" width="303" height="106"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ku1-Cx-fsH">
@@ -102,6 +102,9 @@
                                                         <state key="normal" title="--&gt;">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="forwardPressed" destination="2qS-Zg-aA8" eventType="touchUpInside" id="QJn-27-DDT"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0g-KR-Hka">
                                                         <rect key="frame" x="0.0" y="40" width="60" height="30"/>
@@ -109,6 +112,9 @@
                                                         <state key="normal" title="&lt;--">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="backwardPressed" destination="2qS-Zg-aA8" eventType="touchUpInside" id="vI3-HN-bRl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -133,6 +139,10 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="ku1-Cx-fsH" secondAttribute="bottom" id="ZQb-WU-CvC"/>
                                     <constraint firstItem="ku1-Cx-fsH" firstAttribute="top" secondItem="2qS-Zg-aA8" secondAttribute="topMargin" id="s1I-sn-vQv"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="fromTextField" destination="cBh-aV-yzo" id="DAe-74-LxF"/>
+                                    <outlet property="toTextField" destination="okQ-78-X3f" id="uFf-AM-4Sj"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
