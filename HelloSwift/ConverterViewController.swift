@@ -16,6 +16,42 @@ class ConverterViewController: UIViewController {
     
     @IBOutlet weak var converterView: ConverterView!
     
+    //этот метод вызывается единожды 
+    //за жизнь одного экрана
+    //и является отличной точкой, для настройки и подготовки к работе
+    //
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
     
+    func setup(){
+        //станем делегатом нашего ConverterView
+        converterView.delegate = self
+    }
+}
+
+extension ConverterViewController : ConverterViewDelegate
+{
+    //конвертация из рублей в евро
+    func converterView(view: ConverterView, convertForward value: String?) {
+        //попробуем извлечь число из строки
+        guard let rubText = value,
+              let rubles = Double(rubText)  else {
+            
+                return
+        }
+        
+        //пересчитаем валюту из рублей
+        let euroes = converter.convertForward(amount: rubles)
+        
+        //запишем новое значение в правое поле для ввода
+        view.fromValue = "\(euroes)"
+    }
     
+    func converterView(view: ConverterView, convertBackward value: String?) {
+        
+        
+        
+    }
 }

@@ -38,17 +38,19 @@ class ConverterView: UIView {
         }
     }
     
+    //слева
     @IBOutlet private  weak var toTextField:UITextField?
+    //справа
     @IBOutlet private  weak var fromTextField:UITextField?
     
     @IBAction func forwardPressed(){
         delegate?.converterView(view: self,
-                                convertForward: fromValue)
+                                convertForward: toValue)
     }
     
     @IBAction func backwardPressed(){
         delegate?.converterView(view: self,
-                                convertBackward: toValue)
+                                convertBackward: fromValue)
     }
     
     //переопределим инициализатор UIVIew
